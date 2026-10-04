@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>For My AMARA 🌌</title>
+<style>
+:root{--soft:#eee9fa}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--soft);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 50% 0%,#26365e 0%,#11172e 38%,#080b19 78%);overflow-x:hidden}
+.stars,.stars:before,.stars:after{position:fixed;inset:0;pointer-events:none;content:"";background-image:radial-gradient(1px 1px at 10% 20%,#fff 98%,transparent),radial-gradient(2px 2px at 78% 18%,#dcd4ff 98%,transparent),radial-gradient(1px 1px at 42% 62%,#fff 98%,transparent),radial-gradient(1px 1px at 88% 76%,#fff 98%,transparent),radial-gradient(2px 2px at 23% 83%,#c9b8f2 98%,transparent),radial-gradient(1px 1px at 61% 34%,#fff 98%,transparent);background-size:330px 330px;opacity:.55}
+.stars:before{transform:translate(90px,60px);opacity:.5}.stars:after{transform:translate(-70px,130px);opacity:.35}
+main{position:relative;width:min(720px,92vw);margin:auto;padding:9vh 0 7vh;text-align:center}
+.moon{width:82px;height:82px;border-radius:50%;margin:0 auto 28px;background:radial-gradient(circle at 35% 30%,#fff 0%,#e9e3ff 38%,#b7b9df 72%,#7e86ae 100%);box-shadow:0 0 55px #c5c8ff55}
+.eyebrow{letter-spacing:.25em;text-transform:uppercase;color:#c7c1df;font:11px Arial,sans-serif}
+h1{font-weight:400;font-size:clamp(2.3rem,8vw,4.5rem);line-height:1.08;margin:18px 0;color:#f6f1ff}
+h1 em{color:#d6c5ff;font-weight:400}
+.lead{font-size:1.08rem;line-height:1.8;color:#d4d0e2;max-width:520px;margin:0 auto}
+button{margin:34px auto 0;border:1px solid #b9a9e7a6;background:#b9a9e71a;color:#f5efff;border-radius:999px;padding:15px 25px;font:13px Arial,sans-serif;letter-spacing:.08em;cursor:pointer;transition:.2s}
+button:hover{background:#b9a9e735;transform:translateY(-2px)}
+.letter{display:none;text-align:left;margin:38px auto 0;padding:clamp(23px,6vw,48px);border:1px solid #bdb0df38;border-radius:22px;background:linear-gradient(145deg,#171c34dd,#101426e8);box-shadow:0 20px 80px #0005;line-height:1.95;font-size:1.08rem}
+.letter p{margin:0 0 20px}.letter .sign{color:#d8c9ff;font-style:italic;margin-top:32px}
+.rule{width:70px;height:1px;background:#c9b8f2aa;margin:28px auto}
+footer{margin-top:40px;color:#9694aa;font:11px Arial,sans-serif;letter-spacing:.12em}
+@media(prefers-reduced-motion:no-preference){.moon{animation:glow 5s ease-in-out infinite alternate}@keyframes glow{to{box-shadow:0 0 75px #c5c8ff88}}}
+</style>
+</head>
+<body><div class="stars"></div>
+<main>
+<div class="moon" aria-hidden="true"></div>
+<div class="eyebrow">A letter beneath the same sky</div>
+<h1>My <em>AMARA 🌌</em></h1>
+<p class="lead">Everything I Couldn't Say</p>
+<button id="open" type="button" aria-expanded="false" aria-controls="letter">Open what I couldn't say&nbsp; ♡</button>
+<article class="letter" id="letter" aria-live="polite">
+<p>My AMARA 🌌,</p>
+<p>I wish I could sit beside you beneath a quiet sky and tell you all of this without having to choose the perfect words. Since I cannot, I’m leaving them here—gently, honestly, with no demand placed on your heart.</p>
+<p>There are moments when I miss you in the smallest things: a thought I want to share, a song that suddenly feels familiar, a silence that seems to have your name in it. I don’t know if you understand how much you have meant to me, but I hope you never doubt that what I felt was real.</p>
+<p>I’m sorry for the things I couldn’t express, for the words that arrived late, and for any hurt I may have caused. I can’t rewrite what happened. I can only be honest about what lives in me now.</p>
+<p>If life has taken us onto different roads, I will respect your path. You do not owe me a reply, a promise, or a feeling in return. I only wanted you to know what I never managed to say face to face.</p>
+<p>You will always be the sunshine in my life (you are my sunshine, my only sunshine, you make me happy you are my sunshine).</p>
+<div class="rule"></div>
+<p>And here is my confession, simple and true: <em>I love you, and I always will.</em> Not as a claim on you, but as something my heart needed to say. Whatever the future holds, I wish you gentleness, safety, and a happiness that stays.</p>
+<p class="sign">With love,<br>Adnan</p>
+</article>
+<footer>MADE WITH HONESTY · UNDER THE MOONLIGHT</footer>
+</main>
+<script>
+document.getElementById('open').addEventListener('click',function(){
+ const letter=document.getElementById('letter');
+ letter.style.display='block';this.textContent='Read slowly, whenever you’re ready ♡';
+ this.setAttribute('aria-expanded','true');letter.scrollIntoView({behavior:'smooth',block:'start'});
+});
+</script>
+</body></html>
